@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planning Assessment Form | Professional Planning Services</title>
+    <meta name="description"
+        content="Submit your planning assessment request with our professional, easy-to-use form. Get expert planning consultation for your UK project.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Honeypot for spam protection -->
+    <input type="text" name="website" id="honeypot" style="display: none;" tabindex="-1" autocomplete="off">
+
+    <div class="app-container">
+        <div class="background-glow"></div>
+
+        <main class="main-content" id="mainContent">
+            <div class="form-card glass-card">
+                <header class="form-header">
+                    <h1>Planning Assessment Form</h1>
+                    <p class="form-subtitle">Complete the form below to submit your planning assessment request</p>
+                </header>
+
+                <form id="assessmentForm" novalidate>
+                    <!-- Contact Details Section -->
+                    <section class="form-section">
+                        <h2 class="section-title">
+                            <span class="section-number">01</span>
+                            Contact Details
+                        </h2>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName" class="form-label">First Name <span
+                                        class="required">*</span></label>
+                                <input type="text" id="firstName" name="firstName" class="form-input" maxlength="255"
+                                    required aria-required="true">
+                                <span class="error-message" role="alert"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lastName" class="form-label">Last Name <span
+                                        class="required">*</span></label>
+                                <input type="text" id="lastName" name="lastName" class="form-input" maxlength="255"
+                                    required aria-required="true">
+                                <span class="error-message" role="alert"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" class="form-input" required
+                                aria-required="true">
+                            <span class="error-message" role="alert"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phoneNumber" class="form-label">Phone Number <span
+                                    class="required">*</span></label>
+                            <div class="phone-input-container">
+                                <select id="phoneCountry" class="phone-country-select" aria-label="Country code">
+                                    <option value="+44" selected>🇬🇧 +44</option>
+                                    <option value="+1">🇺🇸 +1</option>
+                                    <option value="+91">🇮🇳 +91</option>
+                                    <option value="+61">🇦🇺 +61</option>
+                                    <option value="+971">🇦🇪 +971</option>
+                                </select>
+                                <input type="tel" id="phoneNumber" name="phoneNumber" class="form-input phone-input"
+                                    placeholder="7700 900000" required aria-required="true">
+                            </div>
+                            <span class="error-message" role="alert"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="whatsappUser" class="form-label">WhatsApp User <span
+                                    class="required">*</span></label>
+                            <select id="whatsappUser" name="whatsappUser" class="form-input" required
+                                aria-required="true">
+                                <option value="">Select an option</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                            <span class="error-message" role="alert"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="companyName" class="form-label">Company Name</label>
+                            <input type="text" id="companyName" name="companyName" class="form-input" maxlength="255">
+                            <span class="helper-text">If there is no company name, please leave this field as
+                                blank</span>
+                        </div>
+                    </section>
+
+                    <!-- Address Details Section -->
+                    <section class="form-section">
+                        <h2 class="section-title">
+                            <span class="section-number">02</span>
+                            Address Details
+                        </h2>
+
+                        <div class="form-group autocomplete-wrapper">
+                            <label for="correspondenceAddress" class="form-label">Your Correspondence Address <span
+                                    class="required">*</span></label>
+                            <div class="address-input-container">
+                                <input type="text" id="correspondenceAddress" name="correspondenceAddress"
+                                    class="form-input address-input" placeholder="Start typing your address..."
+                                    autocomplete="off" required aria-required="true" aria-autocomplete="list"
+                                    aria-controls="correspondenceAddressSuggestions">
+                                <div class="address-dropdown" id="correspondenceAddressSuggestions" role="listbox"
+                                    aria-label="Address suggestions"></div>
+                            </div>
+                            <span class="helper-text">Please include postcode</span>
+                            <span class="error-message" role="alert"></span>
+                        </div>
+
+                        <!-- MANUAL SITE ADDRESS SECTION START -->
+                        <div class="form-group" style="margin-bottom: 24px;">
+                            <label class="form-label">Site Address Details <span class="required">*</span></label>
+
+                            <!-- Prefix Row -->
+                            <div class="form-row" style="margin-bottom: 16px;">
+                                <div class="form-group" style="flex: 1;">
+                                    <label for="siteAddressPrefix" class="form-label"
+                                        style="font-size: 0.9em;">Prefix</label>
+                                    <select id="siteAddressPrefix" name="siteAddressPrefix" class="form-input" required>
+                                        <option value="">Select Prefix</option>
+                                        <option value="Number">Number</option>
+                                        <option value="Name">Name</option>
+                                        <option value="Land North">Land North</option>
+                                        <option value="Land South">Land South</option>
+                                        <option value="Land East">Land East</option>
+                                        <option value="Land West">Land West</option>
+                                    </select>
+                                </div>
+
+                                <!-- Dynamic Input for Number/Name -->
+                                <div class="form-group" id="siteAddressValueContainer" style="flex: 1; display: none;">
+                                    <label for="siteAddressValue" class="form-label" style="font-size: 0.9em;"
+                                        id="siteAddressValueLabel">Value</label>
+                                    <input type="text" id="siteAddressValue" name="siteAddressValue" class="form-input">
+                                </div>
+                            </div>
+
+                            <!-- Road -->
+                            <div class="form-group">
+                                <label for="siteAddressRoad" class="form-label" style="font-size: 0.9em;">Road / Street
+                                    <span class="required">*</span></label>
+                                <input type="text" id="siteAddressRoad" name="siteAddressRoad" class="form-input"
+                                    placeholder="e.g. High Street" required>
+                            </div>
+
+                            <!-- Town & County Row -->
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="siteAddressTown" class="form-label" style="font-size: 0.9em;">Town <span
+                                            class="required">*</span></label>
+                                    <input type="text" id="siteAddressTown" name="siteAddressTown" class="form-input"
+                                        placeholder="e.g. Ipswich" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="siteAddressCounty" class="form-label" style="font-size: 0.9em;">County
+                                        <span class="required">*</span></label>
+                                    <input type="text" id="siteAddressCounty" name="siteAddressCounty"
+                                        class="form-input" placeholder="e.g. Suffolk" required>
+                                </div>
+                            </div>
+
+                            <!-- Postcode -->
+                            <div class="form-group">
+                                <label for="siteAddressPostcode" class="form-label" style="font-size: 0.9em;">Postcode
+                                    <span class="required">*</span></label>
+                                <input type="text" id="siteAddressPostcode" name="siteAddressPostcode"
+                                    class="form-input" placeholder="e.g. IP7 5HZ" required>
+                            </div>
+                        </div>
+                        <!-- MANUAL SITE ADDRESS SECTION END -->
+
+                        <div class="form-group">
+                            <label for="lpaSearch" class="form-label">Local Planning Authority (LPA) <span
+                                    class="required">*</span></label>
+                            <div class="lpa-dropdown-container">
+                                <input type="text" id="lpaSearch" class="form-input lpa-input"
+                                    placeholder="Search for your local planning authority..." autocomplete="off"
+                                    required aria-required="true" aria-autocomplete="list"
+                                    aria-controls="lpaSuggestions">
+                                <div class="lpa-dropdown" id="lpaSuggestions" role="listbox"
+                                    aria-label="LPA suggestions"></div>
+                            </div>
+                            <input type="hidden" id="lpaName" name="lpaName">
+                            <input type="hidden" id="lpaId" name="lpaId">
+                            <span class="error-message" role="alert"></span>
+                        </div>
+                    </section>
+
+                    <!-- Planning Details Section -->
+                    <section class="form-section">
+                        <h2 class="section-title">
+                            <span class="section-number">03</span>
+                            Planning Details
+                        </h2>
+
+                        <div class="form-group">
+                            <label for="fileUpload" class="form-label">Upload Site Plan / Documents <span
+                                    class="required">*</span></label>
+                            <div class="file-upload-container">
+                                <input type="file" id="fileUpload" name="fileUpload" class="file-input" multiple
+                                    accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.dwg" required aria-required="true">
+                                <label for="fileUpload" class="file-upload-label">
+                                    <svg class="upload-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                        <polyline points="17 8 12 3 7 8"></polyline>
+                                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                                    </svg>
+                                    <span class="upload-text">Click to upload or drag and drop</span>
+                                    <span class="upload-hint">PDF, DOC, DOCX, JPG, PNG, DWG (max 10MB each)</span>
+                                </label>
+                                <div class="uploaded-files" id="uploadedFiles"></div>
+                            </div>
+                            <span class="error-message" role="alert"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="proposalSummary" class="form-label">Summary of Proposal <span
+                                    class="required">*</span></label>
+                            <textarea id="proposalSummary" name="proposalSummary" class="form-textarea" rows="6"
+                                maxlength="2000" required aria-required="true"
+                                placeholder="Provide a detailed description of your planning proposal..."></textarea>
+                            <div class="textarea-footer">
+                                <span class="helper-text">i.e. a proposal description</span>
+                                <span class="char-counter" id="charCounter">0 / 2000</span>
+                            </div>
+                            <span class="error-message" role="alert"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="heardAboutUs" class="form-label">How did you hear about us? <span
+                                    class="required">*</span></label>
+                            <select id="heardAboutUs" name="heardAboutUs" class="form-input" required
+                                aria-required="true">
+                                <option value="">Select an option</option>
+                                <option value="Search Engine (e.g. Google, Bing)">Search Engine (e.g. Google, Bing)
+                                </option>
+                                <option value="LinkedIn">LinkedIn</option>
+                                <option value="Instagram">Instagram</option>
+                                <option value="Friend or Family">Friend or Family</option>
+                                <option value="The Developers Club">The Developers Club</option>
+                                <option value="Returning Client">Returning Client</option>
+                                <option value="Business Referral">Business Referral</option>
+                            </select>
+                            <span class="error-message" role="alert"></span>
+                        </div>
+                    </section>
+
+                    <!-- Submit Button -->
+                    <div class="form-actions">
+                        <button type="submit" class="submit-button" id="submitButton">
+                            <span class="button-text">Submit Assessment Request</span>
+                            <span class="button-loader" style="display: none;">
+                                <svg class="spinner" width="20" height="20" viewBox="0 0 24 24">
+                                    <circle class="spinner-circle" cx="12" cy="12" r="10" fill="none" stroke-width="3">
+                                    </circle>
+                                </svg>
+                                Submitting...
+                            </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <!-- Success Screen -->
+        <div class="success-screen" id="successScreen" style="display: none;">
+            <div class="success-card glass-card">
+                <div class="success-icon">
+                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                        <circle cx="40" cy="40" r="38" stroke="url(#successGradient)" stroke-width="4" />
+                        <path d="M25 40L35 50L55 30" stroke="url(#successGradient)" stroke-width="4"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <defs>
+                            <linearGradient id="successGradient" x1="0" y1="0" x2="80" y2="80">
+                                <stop offset="0%" stop-color="#10b981" />
+                                <stop offset="100%" stop-color="#34d399" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <h2 class="success-title">✅ Submitted Successfully</h2>
+                <p class="success-message">Your planning assessment request has been received. We'll be in touch
+                    shortly.</p>
+                <button class="submit-another-button" id="submitAnotherButton">
+                    Submit Another Response
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="uk-lpas.js"></script>
+    <script src="app.js?v=3"></script>
+</body>
+
+</html>
